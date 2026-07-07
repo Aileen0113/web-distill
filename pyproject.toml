@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "web-distill"
+version = "0.1.0"
+description = "把任意 URL 变成知识库条目 — 自动识别平台、提取内容、按话题落盘"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Lin Bo", email = "aileen0113@gmail.com"}
+]
+keywords = ["web", "distill", "knowledge-base", "markdown", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+dependencies = [
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "readability-lxml>=0.8",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+youtube = ["yt-dlp>=2024"]
+all = ["yt-dlp>=2024"]
+
+[project.scripts]
+web-distill = "web_distill.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
