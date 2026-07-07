@@ -80,6 +80,21 @@ distill-output/
 
 每个 URL 生成一个 Markdown 文件，包含完整元数据和正文。
 
+## 配置
+
+**不内置任何 API 密钥。** 所有认证信息由用户自己提供：
+
+```bash
+# 环境变量
+export WEB_DISTILL_LLM_KEY=sk-xxx      # LLM 摘要（未来功能）
+export XIAOEKNOW_KO_TOKEN=xxx           # 小鹅通 cookie
+
+# 命令行参数
+web-distill <url> --config ./my-topics.json
+```
+
+详见 `.env.example`。
+
 ## 设计原则
 
 - **平台自动识别** — 根据 URL 匹配最适合的提取策略
