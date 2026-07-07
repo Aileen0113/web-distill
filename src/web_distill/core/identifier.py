@@ -21,8 +21,6 @@ PLATFORM_RULES: list[tuple[str, str, bool]] = [
     (r"space\.bilibili\.com", "bilibili", True),
     (r"youtube\.com/(watch|playlist|@|channel)", "youtube", False),
     (r"youtu\.be/", "youtube", False),
-    # 付费课程
-    (r"h5\.xiaoeknow\.com", "xiaoeknow", True),
     # 文档站
     (r"d2l\.ai", "sphinx", False),
     (r"readthedocs\.io", "sphinx", False),
@@ -63,7 +61,6 @@ def _platform_name(key: str) -> str:
     names = {
         "bilibili": "B站",
         "youtube": "YouTube",
-        "xiaoeknow": "小鹅通",
         "sphinx": "Sphinx文档",
         "blog": "技术博客",
         "arxiv": "arXiv",

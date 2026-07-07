@@ -44,7 +44,7 @@ web-distill https://example.com --json | jq .
 | **B站** | 标题 / 描述 / UP主 / 时长 / 播放量 |
 | **YouTube** | 元数据 + 字幕（需 yt-dlp） |
 
-更多平台开发中：小鹅通、Sphinx 文档、arXiv、技术博客。
+更多平台开发中：Sphinx 文档、arXiv、技术博客。
 
 ## 话题自动分类
 
@@ -87,13 +87,23 @@ distill-output/
 ```bash
 # 环境变量
 export WEB_DISTILL_LLM_KEY=sk-xxx      # LLM 摘要（未来功能）
-export XIAOEKNOW_KO_TOKEN=xxx           # 小鹅通 cookie
 
 # 命令行参数
 web-distill <url> --config ./my-topics.json
 ```
 
 详见 `.env.example`。
+
+## 免责声明
+
+本工具仅提取用户**有权访问的公开内容**。使用本工具即表示你同意：
+
+- 不用于抓取付费/认证内容、不绕过平台技术保护措施
+- 不将提取内容用于商业化再分发
+- 遵守目标网站的 ToS 及所在地法律法规
+- 因违规使用产生的法律责任由使用者自行承担
+
+本项目不提供、不内置任何破解、绕过认证、规避风控的功能。
 
 ## 设计原则
 

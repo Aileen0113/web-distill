@@ -53,7 +53,6 @@ def _platform_label(key: str) -> str:
     labels = {
         "bilibili": "B站",
         "youtube": "YouTube",
-        "xiaoeknow": "小鹅通",
         "sphinx": "文档站",
         "blog": "技术博客",
         "arxiv": "arXiv",

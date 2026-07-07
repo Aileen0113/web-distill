@@ -135,7 +135,6 @@ def _platform_name(key: str) -> str:
     names = {
         "bilibili": "B站",
         "youtube": "YouTube",
-        "xiaoeknow": "小鹅通",
         "sphinx": "Sphinx文档",
         "blog": "技术博客",
         "arxiv": "arXiv",
